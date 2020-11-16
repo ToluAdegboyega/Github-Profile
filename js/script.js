@@ -6,7 +6,7 @@
 fetch(URL, {
   method: "POST",
   headers: {
-    Authorization: "Bearer   repo-token",
+    Authorization: "Bearer  API_TOKEN",
     "Content-Type": "application/json",
   },
   body: JSON.stringify({
