@@ -1,8 +1,12 @@
+import  { API_TOKEN } from  '../api.js';
+
 const URL = "https://api.github.com/graphql";
+const token = API_TOKEN;
+
 fetch(URL, {
   method: "POST",
   headers: {
-    Authorization: "Bearer ${{secrets.API_TOKEN}}",
+    Authorization: "Bearer  " + token,
     "Content-Type": "application/json",
   },
   body: JSON.stringify({
