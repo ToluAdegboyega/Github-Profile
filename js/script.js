@@ -6,7 +6,7 @@ const token = API_TOKEN;
 fetch(URL, {
   method: "POST",
   headers: {
-    Authorization: "Bearer  " + token,
+    Authorization: "Bearer  ${{secrets.API_TOKEN}} ",
     "Content-Type": "application/json",
   },
   body: JSON.stringify({
