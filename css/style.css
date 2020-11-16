@@ -412,6 +412,14 @@ nav {
     color: rgb(209, 209, 209);
 }
 
+.menu {
+    display: none;
+}
+
+.mobile-nav {
+    display: none;
+}
+
 .footer {
     display: flex;
     align-items: center;
@@ -501,6 +509,106 @@ nav {
         overflow-x: scroll;
     }
 
+    #img img {
+        border-radius: 50%;
+        height: 150px;
+        width: 150px;
+    }
+
 }
+
+@media only screen and (max-width: 900px)   {
+    .menu {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .nav-one    .nav-search,
+    .nav-one    ul,
+    .nav-two    .add,
+    .nav-two    .avatar
+     {
+        display: none;
+    }
+
+    .nav-bar    {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .active {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(41, 41, 41);
+        color: #ffffff;
+        padding: 20px;
+    }
+
+    .active  .nav-search   {
+        background-color: transparent;
+        padding: 3px  10px;
+        border-radius: 5px;
+        border: 1px rgb(105, 105, 105)  solid;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    
+    .active .nav-search  input   {
+        background-color: transparent;
+        color: rgb(197, 195, 195);
+        border: none;
+    }
+    
+    .active .nav-search span    {
+        border: 1px  rgb(105, 105, 105)  solid;
+        border-radius: 5px;
+        padding: 1px    5px ;
+        margin-left: 20px;
+        color: rgb(228, 228, 228);
+    }
+
+    .active ul {
+        list-style-type: none;
+        border-top:  1px  rgb(105, 105, 105)  solid;
+        margin-top: 10px;
+    }
+
+    .active ul  li  {
+        font-size: 14px;
+        font-weight: 600;
+        padding: 5px   0px;
+        margin: 10px   0px;
+        border-bottom:  1px  rgb(105, 105, 105)  solid;
+        cursor: pointer;
+    }
+
+    .active .mobile-avatar  {
+        display: flex;
+        align-items: center;
+        border-bottom:  1px  rgb(105, 105, 105)  solid;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 5px   0px;
+        cursor: pointer;
+    }
+
+    .active .mobile-avatar  .mobile-avatar-img  {
+        width: 20px;
+        border-radius: 50px;
+        margin-right: 5px;
+    }
+
+    .active .sign-out {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 10px  0px;
+        cursor: pointer;
+    }
+}
+
+
 
 
