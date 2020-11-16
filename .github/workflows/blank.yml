@@ -1,31 +1,25 @@
-name: Deploy to GitHub Pages
+name: Build and Deploy
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [13.2.0]
     steps:
-      - uses: actions/checkout@master
-      - name: install, build, and test
-        run: |
-          yarn install
-          yarn lint
-          yarn build
-          yarn test
-        env:
-          CI: true
-      - name: Deploy your app to GitHub Pages
-        uses: awb-pw/deploy-to-github-pages-action@1.1.1
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+        with:
+          persist-credentials: false 
 
-        env:
-          AUTHOR: ToluAdegboyega
-          BUILD_PATH: public
-          GITHUB_PAGE_NAME: https://toluadegboyega.github.io/Github-Profile/
+      - name: Install and Build 🔧
+        run: |
+          npm install
+          npm run-script build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
           API_TOKEN: ${{ secrets.API_TOKEN }}
-          USERNAME: ToluAdegboyega
-          EMAIL: tolzygboyega19@gmail.com
+          BRANCH: main
+          FOLDER: dist
