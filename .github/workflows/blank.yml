@@ -31,12 +31,13 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          
+
       - name: Deploy 🚀
-        uses: actions/checkout@v2
+        uses: actions/labeler@main
+        with: 
+          repo-token: ${{ secrets.API_TOKEN }}
         env:
           BUILD_PATH: public
           GITHUB_PAGE_NAME: toluadegboyega.github.io/Github-Profile/
-          API_TOKEN: ${{ secrets.API_TOKEN }}
           BRANCH: main # The branch the action should deploy to.
           CLEAN: true # Automatically remove deleted files from the deploy branch
