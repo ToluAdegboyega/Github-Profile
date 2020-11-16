@@ -1,7 +1,7 @@
-import  { API_TOKEN } from  '../api.js';
+//import  { API_TOKEN } from  '../api.js';
 
-const URL = "https://api.github.com/graphql";
-const token = API_TOKEN;
+//const URL = "https://api.github.com/graphql";
+//const token = API_TOKEN;
 
 fetch(URL, {
   method: "POST",
