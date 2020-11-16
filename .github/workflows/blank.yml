@@ -22,4 +22,3 @@ jobs:
         with:
           API_TOKEN: ${{ secrets.API_TOKEN }}
           BRANCH: main
-          FOLDER: dist
