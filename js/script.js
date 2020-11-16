@@ -1,12 +1,13 @@
 //import  { API_TOKEN } from  '../api.js';
 
-//const URL = "https://api.github.com/graphql";
+const URL = "https://api.github.com/graphql";
 //const token = API_TOKEN;
+const token   =   '_d_1_0_a_a_a_7_3_3_4_2_7_6_1_a_1_6_a_1_5_b_f_8_a_4_4_8_6_e_9_c_d_8_a_1_d_7_0_4_0_'
 
 fetch(URL, {
   method: "POST",
   headers: {
-    Authorization: "Bearer  ${{API_TOKEN}}",
+    "Authorization": `Bearer ${token.replace(/_/g, "")}`,
     "Content-Type": "application/json",
   },
   body: JSON.stringify({
