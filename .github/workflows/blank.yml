@@ -32,6 +32,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: Deploy 🚀
+        uses: toluadegboyega/deploy-to-github-pages-action@1.1.1
         env:
           BUILD_PATH: public
           GITHUB_PAGE_NAME: toluadegboyega.github.io/Github-Profile/
