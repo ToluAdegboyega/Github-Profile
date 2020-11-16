@@ -1,10 +1,8 @@
-//let id = "cf1d252d63759e1dea739df4df3fbb0a9a873ad2"
-
 const URL = "https://api.github.com/graphql";
 fetch(URL, {
   method: "POST",
   headers: {
-    Authorization: "Bearer cf1d252d63759e1dea739df4df3fbb0a9a873ad2",
+    Authorization: "Bearer 1f78cdaa352fee54e66d8abcf55983707f7c0cb9",
     "Content-Type": "application/json",
   },
   body: JSON.stringify({
