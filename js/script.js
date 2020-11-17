@@ -18,7 +18,6 @@ fetch(URL, {
           bio
           websiteUrl
           name
-          location
           followers {
             totalCount
           }
@@ -29,7 +28,6 @@ fetch(URL, {
               totalCount
               nodes {
                   name
-                  nameWithOwner
                   description
                   updatedAt
                   url
