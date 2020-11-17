@@ -24,7 +24,7 @@ fetch(URL, {
           following {
             totalCount
           }
-          repositories (first: 20) {
+          repositories (orderBy: {field: UPDATED_AT, direction: DESC}, first: 20) {
               totalCount
               nodes {
                   name
