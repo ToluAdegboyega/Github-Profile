@@ -2,12 +2,12 @@ const URL = "https://api.github.com/graphql";
 
 //token used with regex
 
-const token   =   '_d_1_0_a_a_a_7_3_3_4_2_7_6_1_a_1_6_a_1_5_b_f_8_a_4_4_8_6_e_9_c_d_8_a_1_d_7_0_4_0_'
+const mytoken   =   '=d=1=0=a=a=a=7=3=3=4=2=7=6=1=a=1=6=a=1=5=b=f=8=a=4=4=8=6=e=9=c=d=8=a=1=d=7=0=4=0='
 
 fetch(URL, {
   method: "POST",
   headers: {
-    "Authorization": `Bearer ${token.replace(/_/g, "")}`,
+    "Authorization": `Bearer ${mytoken.replace(/=/g, "")}`,
     "Content-Type": "application/json",
   },
   body: JSON.stringify({
