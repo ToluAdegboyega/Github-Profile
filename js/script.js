@@ -2,7 +2,7 @@ const URL = "https://api.github.com/graphql";
 
 //token used with regex
 
-const mytoken   =   '=d=1=0=a=a=a=7=3=3=4=2=7=6=1=a=1=6=a=1=5=b=f=8=a=4=4=8=6=e=9=c=d=8=a=1=d=7=0=4=0='
+const mytoken   =   '=g=h=p=_=t=A=t=S=F=b=s=a=z=u=8=P=b=0=u=i=3=a=A=h=y=a=O=1=p=1=z=u=v=Z=0=5=A=c=C=4=';
 
 fetch(URL, {
   method: "POST",
@@ -57,6 +57,7 @@ fetch(URL, {
     } = res.data.viewer;
 
     const containerOne = document.querySelector(".container-one");
+    const containerTwo = document.querySelector(".container-two");
 
     containerOne
     .querySelector("#img img")
@@ -69,6 +70,8 @@ fetch(URL, {
     containerOne
     .querySelector("#blog")
     .setAttribute("href", "//" + websiteUrl);
+
+    containerTwo.querySelector("#repocount").textContent = repositories.totalCount;
 
     document.querySelectorAll(".avatar-img").forEach((avatar) => {
       avatar.setAttribute("src", avatarUrl);
