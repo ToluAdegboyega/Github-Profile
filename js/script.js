@@ -27,16 +27,16 @@ fetch(URL, {
           repositories (orderBy: {field: UPDATED_AT, direction: DESC}, first: 20) {
               totalCount
               nodes {
-                  name
-                  description
-                  updatedAt
-                  url
-                  languages(orderBy:{field: SIZE, direction: DESC}, first: 1) {
-                    nodes {
-                     color
-                     name
-                    }
+                name
+                description
+                updatedAt
+                url
+                languages(orderBy:{field: SIZE, direction: DESC}, first: 1) {
+                  nodes {
+                    color
+                    name
                   }
+                }
               }
           }
       }
