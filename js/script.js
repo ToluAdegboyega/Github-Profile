@@ -13,34 +13,34 @@ fetch(URL, {
   body: JSON.stringify({
     query: `{
       viewer {
-          login
-          avatarUrl
-          bio
-          websiteUrl
-          name
-          followers {
-            totalCount
-          }
-          following {
-            totalCount
-          }
-          repositories (orderBy: {field: UPDATED_AT, direction: DESC}, first: 20) {
-              totalCount
+        login
+        avatarUrl
+        bio
+        websiteUrl
+        name
+        followers {
+          totalCount
+        }
+        following {
+          totalCount
+        }
+        repositories (orderBy: {field: UPDATED_AT, direction: DESC}, first: 20, ownerAffiliations: OWNER) {
+          totalCount
+          nodes {
+            name
+            description
+            updatedAt
+            url
+            languages(orderBy:{field: SIZE, direction: DESC}, first: 1) {
               nodes {
+                color
                 name
-                description
-                updatedAt
-                url
-                languages(orderBy:{field: SIZE, direction: DESC}, first: 1) {
-                  nodes {
-                    color
-                    name
-                  }
-                }
               }
+            }
           }
+        }
       }
-  }`,
+    }`,
   }),
 })
   .then((res) => res.json())
